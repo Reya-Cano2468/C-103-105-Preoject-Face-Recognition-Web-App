@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>Face Recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <center>
+            <h1>Face Recognition</h1>
+            <br><br>
+
+            <p style="font-size: 22px;" id="p1">This model is trained to identify the following people: </p>
+            <br>
+            <hr>
+            <h4> Me </h4>
+            <hr>
+            <h4> My Sister</h4>
+            <hr>
+
+            <label>Webcam View - </label>
+
+            <br><br>
+            <div id="camera"> </div>
+            <br><br><br>
+            <label>Screenshot - </label>
+            <div id="result"> </div>
+
+            <br><br>
+
+            <br><br>
+            <button id="ci" class="btn btn-info" onclick="take_snapshot()"> Capture Image </button>
+            <br>
+            <br>
+            <br>
+            <button id="if" class="btn btn-success" onclick="check()"> Identify Face </button>
+            <br><br>
+
+            <p style="font-size: 22px;">Person : <span id="object_name"></span></p>
+            <p style="font-size: 22px;">Accuracy :<span id="accuracy"></span></p>
+
+        </center>
+
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
